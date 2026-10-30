@@ -1,0 +1,11 @@
+{
+    "name": "cursodelaravel/shopping_cart",
+    "description": "n",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./"
+        }
+    }
+}
