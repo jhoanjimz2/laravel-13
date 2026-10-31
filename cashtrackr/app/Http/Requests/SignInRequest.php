@@ -17,10 +17,18 @@ class SignInRequest extends FormRequest
         ];
     }
 
+    #[Override]
+    public function messages()
+    {
+        return [
+            'email.exists' => 'No encontramos una cuenta con ese e-mail'
+        ];
+    }
+
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email', 'exists:users,email'],
             'password' => ['required'],
         ];
     }

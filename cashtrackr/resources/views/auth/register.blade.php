@@ -17,9 +17,7 @@
             name="name"
             value="{{ old('name') }}"
         />
-        @error('name')
-            <p class="text-red-600">{{ $message }}</p>
-        @enderror
+        <x-input-error field="name"/>
     </div>
 
     <div class="space-y-2">
@@ -33,9 +31,7 @@
             name="email"
             value="{{ old('email') }}"
         />
-        @error('email')
-            <p class="text-red-600">{{ $message }}</p>
-        @enderror
+        <x-input-error field="email"/>
     </div>
 
     <div class="space-y-2">
@@ -47,9 +43,7 @@
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="password"
         />
-        @error('password')
-            <p class="text-red-600">{{ $message }}</p>
-        @enderror
+        <x-input-error field="password"/>
     </div>
 
     <div class="space-y-2">
