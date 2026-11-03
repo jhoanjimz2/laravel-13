@@ -44,7 +44,7 @@ Route::post('/email/verification-notification', function(Request $request) {
 // Route::get('/budgets/create', [BudgetController::class, 'create'])->middleware(['auth', 'verified'])->name('budgets.create');
 
 
-Route::middleware(['auth', 'verified'])->prefix('dashboard')->group(function () {
+Route::prefix('dashboard')->group(function () {
     Route::get('/', [BudgetController::class, 'index'])->name('dashboard');
     Route::get('/budgets/create', [BudgetController::class, 'create'])->name('budgets.create');
     Route::post('/budgets', [BudgetController::class, 'store'])->name('budgets.store');
